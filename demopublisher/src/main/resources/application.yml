@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: demopublisher
+  cloud:
+    stream:
+      bindings:
+        nilaOutput:
+          group: default
+          destination: nila
+          durableSubscription: true
+  rabbitmq:
+    addresses: localhost:5672
+server:
+  port: 9992
+
+logging:
+  level:
+    com:
+      example:
+        demopublisher: DEBUG
