@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demosubscriber
+  cloud:
+    stream:
+      bindings:
+        nilaInput:
+          group: default
+          destination: nila
+          durableSubscription: true
+  rabbitmq:
+    addresses: localhost:5672
+server:
+  port: 9991
+
+
+logging:
+  level:
+    com:
+      example:
+        demosubscriber: DEBUG
